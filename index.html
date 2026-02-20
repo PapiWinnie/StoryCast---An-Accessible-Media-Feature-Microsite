@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StoryCast — Premium accessible audio and video storytelling for everyone." />
+  <title>StoryCast — Stories for Everyone</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header role="banner">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container site-nav__inner">
+
+        <a href="index.html" class="site-nav__logo" aria-label="StoryCast home">
+          <span class="logo-text">StoryCast</span>
+        </a>
+
+        <button
+          class="site-nav__hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="site-nav__links" id="main-nav-links" role="list">
+          <li><a href="index.html" aria-current="page">Stories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#accessibility">Accessibility</a></li>
+        </ul>
+
+        <div class="site-nav__actions">
+          <div class="search-wrap">
+            <span class="search-icon" aria-hidden="true"></span>
+            <label for="site-search" class="sr-only">Search stories</label>
+            <input
+              type="search"
+              id="site-search"
+              name="q"
+              placeholder="Search stories..."
+              aria-label="Search stories"
+            />
+          </div>
+          <a href="story/the-silent-echo.html" class="btn-listen">▶ Listen Now</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <img
+          src="assets/images/hero-library.jpg"
+          alt=""
+          role="presentation"
+        />
+      </div>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__content">
+            <p class="hero__meta">
+              <span class="pill pill--feature">Feature Story</span>
+              &nbsp; 15 MINS · AUDIO DRAMA
+            </p>
+            <h1 id="hero-title" class="hero__title">The Midnight Library</h1>
+            <p class="hero__desc">
+              A cinematic audio experience exploring the corridors of forgotten
+              memories and the lives we never lived.
+            </p>
+            <div class="hero__actions">
+              <a href="story/the-silent-echo.html" class="btn btn--primary">
+                ▶ Play Now
+              </a>
+              <button class="btn btn--ghost" aria-label="Save The Midnight Library to your library">
+                Save to Library
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Browse by category">
+      <div class="container">
+        <div class="category-filter">
+          <h2 class="category-filter__heading">
+            <span class="icon" aria-hidden="true">≡</span>
+            Browse by Category
+          </h2>
+          <div
+            class="category-filter__pills"
+            role="group"
+            aria-label="Filter stories by category"
+          >
+            <button aria-pressed="true">All Stories</button>
+            <button aria-pressed="false">Folklore</button>
+            <button aria-pressed="false">Investigative</button>
+            <button aria-pressed="false">Sci-Fi</button>
+            <button aria-pressed="false">Memoirs</button>
+            <button aria-pressed="false">Short Fiction</button>
+            <button aria-pressed="false">Classics</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-grid-section" aria-labelledby="stories-heading">
+      <div class="container">
+        <h2 id="stories-heading" class="sr-only">Featured Stories</h2>
+
+        <div class="story-grid">
+
+          <article class="story-card">
+            <a href="story/the-silent-echo.html" aria-label="The Silent Sea — Audio story by Elena Rossi">
+              <div class="story-card__image">
+                <img
+                  src="assets/images/story-sea.jpg"
+                  alt="Mysterious deep sea underwater scene"
+                  loading="lazy"
+                />
+                <span class="pill pill--audio">Audio</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="story/the-silent-echo.html">The Silent Sea</a>
+              </h3>
+              <p class="story-card__author">by Elena Rossi</p>
+              <p class="story-card__excerpt">
+                A deep sea expedition into the unknown trenches of the Pacific
+                where the silence speaks louder than any sonar.
+              </p>
+              <div class="story-card__meta">
+                <span> 18 min</span>
+                <span>·</span>
+                <span>Investigative</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <a href="story/the-silent-echo.html" aria-label="Neon Shadows — Video story by Marcus Chen">
+              <div class="story-card__image">
+                <img
+                  src="assets/images/story-city.jpg"
+                  alt="Cyberpunk neon-lit city corridor"
+                  loading="lazy"
+                />
+                <span class="pill pill--video">Video</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="story/the-silent-echo.html">Neon Shadows</a>
+              </h3>
+              <p class="story-card__author">by Marcus Chen</p>
+              <p class="story-card__excerpt">
+                Gritty noir set in a cybernetic future where memories can be
+                bought, sold, and erased for the right price.
+              </p>
+              <div class="story-card__meta">
+                <span> 24 min</span>
+                <span>·</span>
+                <span>Sci-Fi</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <a href="story/the-silent-echo.html" aria-label="Echoes of Gaia — Audio story by Sarah Jenkins">
+              <div class="story-card__image">
+                <img
+                  src="assets/images/story-mountain.jpg"
+                  alt="Misty mountain peaks at dawn"
+                  loading="lazy"
+                />
+                <span class="pill pill--audio">Audio</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="story/the-silent-echo.html">Echoes of Gaia</a>
+              </h3>
+              <p class="story-card__author">by Sarah Jenkins</p>
+              <p class="story-card__excerpt">
+                Listen to the heartbeat of a dying planet as it whispers its
+                final secrets to the last botanist on Earth.
+              </p>
+              <div class="story-card__meta">
+                <span> 22 min</span>
+                <span>·</span>
+                <span>Nature</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <a href="story/the-silent-echo.html" aria-label="The Last Train — Audio story by David Vane">
+              <div class="story-card__image">
+                <img
+                  src="assets/images/story-train.jpg"
+                  alt="Snow-covered railway tracks stretching into distance"
+                  loading="lazy"
+                />
+                <span class="pill pill--audio">Audio</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="story/the-silent-echo.html">The Last Train</a>
+              </h3>
+              <p class="story-card__author">by David Vane</p>
+              <p class="story-card__excerpt">
+                A mysterious journey across the Alps where the passengers are
+                not who they seem to be.
+              </p>
+              <div class="story-card__meta">
+                <span> 15 min</span>
+                <span>·</span>
+                <span>Mystery</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <a href="story/the-silent-echo.html" aria-label="Whispering Woods — Video story by Anya Petrova">
+              <div class="story-card__image">
+                <img
+                  src="assets/images/story-forest.jpg"
+                  alt="Tall forest with light filtering through trees"
+                  loading="lazy"
+                />
+                <span class="pill pill--video">Video</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="story/the-silent-echo.html">Whispering Woods</a>
+              </h3>
+              <p class="story-card__author">by Anya Petrova</p>
+              <p class="story-card__excerpt">
+                Forest spirits and ancient legends come to life in this visually
+                stunning exploration of Slavic folklore.
+              </p>
+              <div class="story-card__meta">
+                <span> 30 min</span>
+                <span>·</span>
+                <span>Folklore</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <a href="story/the-silent-echo.html" aria-label="Digital Dreams — Audio story by Hiroshi Tanaka">
+              <div class="story-card__image">
+                <img
+                  src="assets/images/story-digital.jpg"
+                  alt="Close-up portrait of a face with digital overlays"
+                  loading="lazy"
+                />
+                <span class="pill pill--audio">Audio</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="story/the-silent-echo.html">Digital Dreams</a>
+              </h3>
+              <p class="story-card__author">by Hiroshi Tanaka</p>
+              <p class="story-card__excerpt">
+                An audio-first investigation into the ethics of AI consciousness
+                and the future of digital legacy.
+              </p>
+              <div class="story-card__meta">
+                <span> 20 min</span>
+                <span>·</span>
+                <span>Sci-Fi</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+
+        <div class="site-footer__brand">
+          <a href="index.html" class="footer-logo" aria-label="StoryCast home">
+            <span class="logo-text">StoryCast</span>
+          </a>
+          <p>
+            "Making the world's greatest stories accessible to every ear and
+            eye. We believe in the power of immersive, high-quality storytelling
+            for everyone."
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Share StoryCast">🔗</a>
+            <a href="#" aria-label="Visit our website">🌐</a>
+            <a href="#" aria-label="Email us">✉</a>
+          </div>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Explore</h4>
+          <ul role="list">
+            <li><a href="#">Trending Now</a></li>
+            <li><a href="#">Original Dramas</a></li>
+            <li><a href="#">Curated Collections</a></li>
+            <li><a href="#">New Releases</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Support</h4>
+          <ul role="list">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Premium Plans</a></li>
+            <li><a href="#">Gift StoryCast</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2024 StoryCast Inc. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Settings</a>
+        </div>
+        <div class="accessibility-badge" role="note" aria-label="Accessibility certification">
+          <span aria-hidden="true"></span> Accessibility First Certified
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

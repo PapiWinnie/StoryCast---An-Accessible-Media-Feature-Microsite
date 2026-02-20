@@ -1,0 +1,139 @@
+// =============================================================================
+// FILE: sass/partials/_home.scss
+// Home page specific styles
+// =============================================================================
+
+//  Hero 
+.hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(#1a1500, 0.96) 0%,
+        rgba(#1a1500, 0.6) 50%,
+        rgba(#1a1500, 0.25) 100%
+      );
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: $z-above;
+    padding: $space-20 0 $space-16;
+    max-width: 680px;
+
+    .pill { margin-bottom: $space-4; }
+  }
+
+  &__meta {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    text-transform: uppercase;
+    letter-spacing: $tracking-widest;
+    margin-bottom: $space-4;
+  }
+
+  &__title {
+    font-size: clamp($text-4xl, 7vw, $text-7xl);
+    font-weight: $weight-black;
+    line-height: $leading-tight;
+    margin-bottom: $space-5;
+    letter-spacing: $tracking-tight;
+  }
+
+  &__desc {
+    font-style: italic;
+    font-size: $text-lg;
+    color: $color-text-secondary;
+    line-height: $leading-snug;
+    margin-bottom: $space-8;
+    max-width: 520px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-4;
+    flex-wrap: wrap;
+  }
+}
+
+//  Category filter bar 
+.category-filter {
+  padding-block: $space-10;
+  border-bottom: 1px solid $color-border-subtle;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    font-family: $font-display;
+    font-style: italic;
+    font-size: $text-2xl;
+    margin-bottom: $space-6;
+    color: $color-text-primary;
+
+    .icon { color: $color-accent; }
+  }
+
+  &__pills {
+    display: flex;
+    gap: $space-3;
+    flex-wrap: wrap;
+
+    button {
+      padding: $space-2 $space-5;
+      border-radius: $radius-full;
+      font-size: $text-sm;
+      font-weight: $weight-medium;
+      border: 1.5px solid $color-border;
+      color: $color-text-secondary;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover,
+      &[aria-pressed="true"] {
+        background: $color-accent;
+        color: $color-text-inverse;
+        border-color: $color-accent;
+      }
+    }
+  }
+}
+
+//  Story grid 
+.story-grid-section {
+  padding-block: $space-12;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-8;
+
+  @media (max-width: $bp-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $bp-sm) {
+    grid-template-columns: 1fr;
+  }
+}

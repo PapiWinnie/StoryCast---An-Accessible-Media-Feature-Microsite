@@ -171,4 +171,4 @@ sass sass/main.scss css/main.css --style=compressed
 
 ---
 
-*StoryCast — Every story deserves to be heard, seen, and felt.*
+

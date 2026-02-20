@@ -1,0 +1,34 @@
+// =============================================================================
+// FILE: sass/tokens/_colors.scss
+// StoryCast Color Tokens
+// =============================================================================
+
+// Background palette
+$color-bg-base:        #1a1500;   // deepest background
+$color-bg-surface:     #1e1c0f;   // page background
+$color-bg-card:        #1b2236;   // card / panel background
+$color-bg-card-alt:    #151e30;   // alternate card shade
+$color-bg-nav:         #121008;   // navigation bar
+
+// Accent / brand
+$color-accent:         #f5a623;   // primary amber/gold
+$color-accent-hover:   #e0921a;   // darker amber on hover
+$color-accent-muted:   rgba(#f5a623, 0.15); // translucent amber
+
+// Text
+$color-text-primary:   #f0ede8;   // main body text
+$color-text-secondary: #a89f8c;   // muted / caption text
+$color-text-inverse:   #1a1500;   // text on amber button
+
+// Borders & dividers
+$color-border:         rgba(#f5a623, 0.18);
+$color-border-subtle:  rgba(#ffffff, 0.08);
+
+// Semantic states
+$color-focus-ring:     #f5a623;   // 3px amber focus ring (WCAG AA)
+$color-success:        #4caf7d;
+$color-error:          #e05c5c;
+
+// Overlays
+$color-overlay-dark:   rgba(#000000, 0.55);
+$color-overlay-hero:   rgba(#1a1500, 0.70);

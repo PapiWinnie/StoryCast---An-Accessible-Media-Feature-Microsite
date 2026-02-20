@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!-- FILE: story/the-silent-echo.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Silent Echo — A narrative non-fiction audio story by Eleanor Vance exploring Echo Valley's disappearing soundscape." />
+  <title>The Silent Echo — StoryCast</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION (identical to all pages)
+       ═══════════════════════════════════════════════════════ -->
+  <header role="banner">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container site-nav__inner">
+
+        <a href="../index.html" class="site-nav__logo" aria-label="StoryCast home">
+          <span class="logo-text">StoryCast</span>
+        </a>
+
+        <button
+          class="site-nav__hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="site-nav__links" id="main-nav-links" role="list">
+          <li><a href="../index.html">Stories</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../about.html#accessibility">Accessibility</a></li>
+        </ul>
+
+        <div class="site-nav__actions">
+          <div class="search-wrap">
+            <label for="site-search" class="sr-only">Search stories</label>
+            <input
+              type="search"
+              id="site-search"
+              name="q"
+              placeholder="Search stories..."
+              aria-label="Search stories"
+            />
+          </div>
+          <a href="#player" class="btn-listen">▶ Listen Now</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- 
+      MAIN CONTENT
+    -->
+  <main id="main-content">
+    <div class="container">
+      <article class="story-detail" aria-labelledby="story-title">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb" role="list">
+            <li><a href="../index.html">Home</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li><a href="../index.html">Stories</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li class="active" aria-current="page">The Silent Echo</li>
+          </ol>
+        </nav>
+
+        <!-- Story Header -->
+        <header class="story-detail__header">
+          <div class="story-detail__tags">
+            <span class="pill pill--feature">Narrative Non-Fiction</span>
+            <span class="meta-duration">
+              <span aria-hidden="true"></span>
+              <span>15 min read/listen</span>
+            </span>
+          </div>
+
+          <h1 id="story-title">The Silent Echo</h1>
+
+          <address class="story-detail__author" rel="author">
+            <div class="author-avatar">
+              <img src="../assets/images/author-eleanor.jpg" alt="Eleanor Vance" />
+            </div>
+            <div class="author-info">
+              <strong>By Eleanor Vance</strong>
+              <time datetime="2023-10-24">Published Oct 24, 2023</time>
+            </div>
+          </address>
+        </header>
+
+        <!--  Media Player -->
+        <section class="story-detail__media" id="player" aria-labelledby="player-heading">
+          <h2 id="player-heading" class="sr-only">Audio Player</h2>
+
+          <div class="media-player" role="region" aria-label="Audio story player">
+            <div class="media-player__visual" aria-hidden="true">
+              <img
+                src="../assets/images/story-forest-dark.jpg"
+                alt=""
+                role="presentation"
+              />
+            </div>
+
+            <!-- Native audio element (accessible fallback) -->
+            <audio
+              id="audio-player"
+              aria-label="The Silent Echo audio story"
+              preload="metadata"
+            >
+              <source src="../assets/audio/the-silent-echo.mp3" type="audio/mpeg" />
+              <source src="../assets/audio/the-silent-echo.ogg" type="audio/ogg" />
+              <p>
+                Your browser doesn't support HTML audio.
+                <a href="../assets/audio/the-silent-echo.mp3">Download the audio file</a>.
+              </p>
+            </audio>
+
+            <!-- Custom controls (keyboard accessible) -->
+            <div class="media-player__controls">
+
+              <button
+                class="media-player__icon-btn"
+                id="btn-rewind"
+                aria-label="Rewind 10 seconds"
+                title="Rewind 10 seconds"
+              >↩ 10</button>
+
+              <button
+                class="media-player__play-btn"
+                id="btn-play"
+                aria-label="Play The Silent Echo"
+                aria-pressed="false"
+              >▶</button>
+
+              <button
+                class="media-player__icon-btn"
+                id="btn-forward"
+                aria-label="Fast forward 15 seconds"
+                title="Fast forward 15 seconds"
+              >15 ↪</button>
+
+              <span class="media-player__time" id="time-current" aria-live="off">0:00</span>
+
+              <label for="progress-bar" class="sr-only">Playback progress</label>
+              <input
+                type="range"
+                class="media-player__progress"
+                id="progress-bar"
+                min="0"
+                max="100"
+                value="0"
+                step="1"
+                aria-label="Playback progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              />
+
+              <span class="media-player__time" id="time-duration">15:00</span>
+
+              <div class="media-player__volume">
+                <span aria-hidden="true">🔊</span>
+                <label for="volume-control" class="sr-only">Volume</label>
+                <input
+                  type="range"
+                  id="volume-control"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="1"
+                  aria-label="Volume control"
+                />
+              </div>
+
+              <button
+                class="btn btn--dark btn--transcript"
+                id="btn-transcript"
+                aria-controls="transcript-content"
+                aria-expanded="false"
+              >View Transcript</button>
+
+            </div>
+          </div>
+        </section>
+
+        <!--  Transcript  -->
+        <section
+          class="transcript-panel"
+          id="transcript-region"
+          aria-labelledby="transcript-heading"
+        >
+          <button
+            class="transcript-panel__toggle"
+            aria-expanded="false"
+            aria-controls="transcript-content"
+            id="transcript-toggle"
+          >
+            <span id="transcript-heading">Full Transcript</span>
+            <span class="toggle-icon" aria-hidden="true">▼</span>
+          </button>
+
+          <div
+            class="transcript-panel__content"
+            id="transcript-content"
+            role="region"
+            aria-label="Story transcript"
+          >
+            <p>
+              <strong>[00:00]</strong> The silence here isn't empty; it's heavy. It's a physical weight
+              that sits on your shoulders, whispering stories of generations that found
+              solace in the quiet and terror in the noise.
+            </p>
+            <p>
+              <strong>[01:24]</strong> Beyond the rugged exterior of the peaks lies a narrative structure
+              that defies simple categorization. This story explores the intersection of
+              traditional folklore and modern isolation, weaving together interviews from
+              the last remaining residents of Echo Valley.
+            </p>
+            <p>
+              <strong>[03:10]</strong> Through meticulous research and hours of ambient recordings, Vance
+              captures the transition of a landscape from a bustling mining hub to a
+              spectral sanctuary. The "Silent Echo" is both a literal phenomenon — a
+              specific acoustic dead zone found deep within the limestone caverns — and a
+              metaphor for the cultural erasure facing many rural communities today.
+            </p>
+            <p>
+              <strong>[07:45]</strong> As the younger generation moves toward the glow of city lights,
+              the echoes of the past grow fainter, yet more profound for those who remain.
+              In this detailed exploration, we delve into the physics of sound and the
+              psychology of memory.
+            </p>
+            <p>
+              <strong>[12:00]</strong> How do we hold onto the voices of those who came before us when
+              the very air seems determined to swallow them whole? Join us as we journey
+              into the heart of the mountains to listen to the things that go unsaid.
+            </p>
+            <a
+              href="../assets/transcripts/the-silent-echo-transcript.txt"
+              class="btn btn--dark"
+              download
+              aria-label="Download full transcript for The Silent Echo as a text file"
+            >
+              ⬇ Download Transcript (.txt)
+            </a>
+          </div>
+        </section>
+
+        <!--  Pull Quote -->
+        <blockquote class="pull-quote">
+          <p>
+            "The silence here isn't empty; it's heavy. It's a physical weight that
+            sits on your shoulders, whispering stories of generations that found
+            solace in the quiet and terror in the noise."
+          </p>
+        </blockquote>
+
+        <!--  Story Body -->
+        <div class="story-detail__body">
+          <p>
+            Beyond the rugged exterior of the peaks lies a narrative structure that defies
+            simple categorization. This story explores the intersection of traditional
+            folklore and modern isolation, weaving together interviews from the last
+            remaining residents of Echo Valley. Through meticulous research and hours of
+            ambient recordings, Vance captures the transition of a landscape from a
+            bustling mining hub to a spectral sanctuary.
+          </p>
+          <p>
+            The "Silent Echo" is both a literal phenomenon — a specific acoustic dead zone
+            found deep within the limestone caverns — and a metaphor for the cultural
+            erasure facing many rural communities today. As the younger generation moves
+            toward the glow of city lights, the echoes of the past grow fainter, yet more
+            profound for those who remain.
+          </p>
+          <p>
+            In this detailed exploration, we delve into the physics of sound and the
+            psychology of memory. How do we hold onto the voices of those who came before
+            us when the very air seems determined to swallow them whole? Join us as we
+            journey into the heart of the mountains to listen to the things that go unsaid.
+          </p>
+        </div>
+
+      </article>
+    </div>
+
+    <!--  Related Stories  -->
+    <section class="related-stories" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="related-stories__header">
+          <h2 id="related-heading">Related Stories</h2>
+          <a href="../index.html" aria-label="Explore all stories">Explore all stories →</a>
+        </div>
+
+        <div class="related-stories__grid">
+
+          <article class="story-card">
+            <a href="the-silent-echo.html" aria-label="Chasing Shadows: The Highway Ghost — Mystery story">
+              <div class="story-card__image">
+                <img
+                  src="../assets/images/story-highway.jpg"
+                  alt="Dark highway at night lit by orange trees"
+                  loading="lazy"
+                />
+                <span class="pill pill--audio">Mystery</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="the-silent-echo.html">Chasing Shadows: The Highway Ghost</a>
+              </h3>
+              <div class="story-card__meta">
+                <span>12 min listen</span>
+                <span>·</span>
+                <span>By Marcus Thorne</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <a href="the-silent-echo.html" aria-label="Midnight in the Valley: Radio's Last Gasp — Culture story">
+              <div class="story-card__image">
+                <img
+                  src="../assets/images/story-radio.jpg"
+                  alt="Vintage microphone on stage under spotlight"
+                  loading="lazy"
+                />
+                <span class="pill pill--audio">Culture</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="the-silent-echo.html">Midnight in the Valley: Radio's Last Gasp</a>
+              </h3>
+              <div class="story-card__meta">
+                <span>18 min listen</span>
+                <span>·</span>
+                <span>By Sarah Jenkins</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-card">
+            <a href="the-silent-echo.html" aria-label="The Cold Summit: Echoes of the North — Nature story">
+              <div class="story-card__image">
+                <img
+                  src="../assets/images/story-summit.jpg"
+                  alt="Snow-capped mountain peaks under blue sky"
+                  loading="lazy"
+                />
+                <span class="pill pill--audio">Nature</span>
+              </div>
+            </a>
+            <div class="story-card__body">
+              <h3 class="story-card__title">
+                <a href="the-silent-echo.html">The Cold Summit: Echoes of the North</a>
+              </h3>
+              <div class="story-card__meta">
+                <span>22 min listen</span>
+                <span>·</span>
+                <span>By David Atten</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER (identical to all pages)
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+
+        <div class="site-footer__brand">
+          <a href="../index.html" class="footer-logo" aria-label="StoryCast home">
+            <span class="logo-text">StoryCast</span>
+          </a>
+          <p>
+            A premium audio-narrative experience for the curious mind. Dive into
+            deeply researched stories that challenge your perspective and ignite
+            your imagination.
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Share StoryCast">🔗</a>
+            <a href="#" aria-label="Visit our website">🌐</a>
+            <a href="#" aria-label="Email us">✉</a>
+          </div>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Explore</h4>
+          <ul role="list">
+            <li><a href="#">Latest Stories</a></li>
+            <li><a href="#">Popular Series</a></li>
+            <li><a href="#">Editor's Picks</a></li>
+            <li><a href="#">Hidden Gems</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="../about.html">Our Mission</a></li>
+            <li><a href="#">Creators Portal</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2023 StoryCast Media. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="accessibility-badge" role="note" aria-label="Accessibility certification">
+          <span aria-hidden="true"></span> Accessibility First Certified
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!-- FILE: about.html (root of project) -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StoryCast's mission, inclusive features, and accessibility commitment — Stories for Everyone." />
+  <title>About & Accessibility — StoryCast</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ====  NAVIGATION (identical to all pages) ====  -->
+  <header role="banner">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container site-nav__inner">
+
+        <a href="index.html" class="site-nav__logo" aria-label="StoryCast home">
+          <span class="logo-text">StoryCast</span>
+        </a>
+
+        <button
+          class="site-nav__hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="site-nav__links" id="main-nav-links" role="list">
+          <li><a href="index.html">Stories</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="about.html#accessibility">Accessibility</a></li>
+        </ul>
+
+        <div class="site-nav__actions">
+          <div class="search-wrap">
+            <label for="site-search" class="sr-only">Search stories</label>
+            <input
+              type="search"
+              id="site-search"
+              name="q"
+              placeholder="Search stories..."
+              aria-label="Search stories"
+            />
+          </div>
+          <a href="index.html" class="btn-listen">▶ Listen Now</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  
+    <!-- ====MAIN CONTENT=== -->
+      
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="about-hero" aria-labelledby="about-title">
+      <div class="container">
+        <h1 id="about-title">Stories for Everyone</h1>
+        <p>
+          Our mission is to break barriers in digital storytelling, ensuring
+          every narrative is accessible, inclusive, and engaging for all
+          audiences, regardless of ability.
+        </p>
+        <div class="about-hero__actions">
+          <a href="index.html" class="btn btn--primary">Explore the Library</a>
+          <a href="#accessibility" class="btn btn--ghost">Our Commitment</a>
+        </div>
+      </div>
+    </section>
+
+   <!-- Inclusive Features  -->
+    <section class="inclusive-features" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading">Our Inclusive Features</h2>
+
+        <div class="inclusive-features__grid">
+
+          <article class="feature-card" aria-label="Audio Stories feature">
+      
+            <h3>Audio Stories</h3>
+            <p>
+              High-quality narration with customizable playback speed controls,
+              optimized for spatial audio and immersive listening. Compatible
+              with all screen readers and hearing aid Bluetooth profiles.
+            </p>
+          </article>
+
+          <article class="feature-card" aria-label="Video Stories feature">
+    
+            <h3>Video Stories</h3>
+            <p>
+              Signed content in ASL and BSL with high-contrast visuals,
+              customizable closed captioning, and descriptive video service
+              for visually impaired audiences.
+            </p>
+          </article>
+
+          <article class="feature-card" aria-label="Full Transcripts feature">
+            
+            <h3>Full Transcripts</h3>
+            <p>
+              Searchable, downloadable text versions for every production,
+              compatible with all major refreshable Braille displays and
+              assistive reading technology.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+     <!-- Accessibility Commitment  -->
+    <section
+      class="a11y-section"
+      id="accessibility"
+      aria-labelledby="a11y-heading"
+    >
+      <div class="container">
+        <div class="a11y-section__inner">
+
+          <div class="a11y-section__text">
+            <h2 id="a11y-heading">Our Accessibility Commitment</h2>
+            <p class="lead">
+              We strive to create an environment where stories are truly for
+              everyone. Our platform is built from the ground up to exceed
+              standard accessibility guidelines.
+            </p>
+
+            <ul class="checklist" role="list">
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <span>
+                  <strong>WCAG 2.1 Level AA:</strong> Full compliance across
+                  all web and mobile interfaces.
+                </span>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <span>
+                  <strong>Screen Reader Support:</strong> Rigorous testing with
+                  VoiceOver, NVDA, and JAWS.
+                </span>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <span>
+                  <strong>Keyboard Navigation:</strong> Robust focus management
+                  for non-mouse users with visible amber focus rings.
+                </span>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <span>
+                  <strong>Captions &amp; Transcripts:</strong> Every audio and
+                  video story includes a full searchable transcript.
+                </span>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">✓</span>
+                <span>
+                  <strong>Reduced Motion:</strong> Respects
+                  <code>prefers-reduced-motion</code> browser setting.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Interactive Demo -->
+          <div
+            class="a11y-section__demo"
+            role="region"
+            aria-labelledby="demo-heading"
+          >
+            <p class="demo-label" id="demo-heading">Interactive Demo</p>
+            <p class="demo-subtitle">
+              Press "Tab" to see our signature high-visibility focus ring in action.
+            </p>
+
+            <!-- Text size control -->
+            <div class="demo-row">
+              <label>Text Size Control</label>
+              <div class="text-size-control" role="group" aria-label="Text size control">
+                <span>Text Size Control</span>
+                <button
+                  class="size-btn"
+                  id="btn-decrease-text"
+                  aria-label="Decrease text size"
+                >A-</button>
+                <button
+                  class="size-btn"
+                  id="btn-increase-text"
+                  aria-label="Increase text size"
+                >A+</button>
+              </div>
+            </div>
+
+            <!-- High contrast toggle -->
+            <div class="demo-row">
+              <button
+                class="toggle-btn"
+                id="btn-high-contrast"
+                aria-pressed="false"
+                aria-label="Toggle high contrast mode"
+              >
+                Toggle High Contrast Mode
+              </button>
+            </div>
+
+            <!-- Auto caption toggle -->
+            <div class="demo-row">
+              <label class="caption-toggle" for="caption-toggle">
+                <span class="toggle-switch" role="switch" aria-checked="true">
+                  <input
+                    type="checkbox"
+                    id="caption-toggle"
+                    checked
+                    aria-label="Auto-captioning active"
+                  />
+                  <span class="slider" aria-hidden="true"></span>
+                </span>
+                Auto-Captioning Active
+              </label>
+            </div>
+
+            <!-- Focus ring showcase -->
+            <div>
+              <button
+                class="focus-ring-badge"
+                aria-label="Example of 3px amber focus ring for maximum visibility"
+              >
+                ♿ 3px Amber Focus Ring for Maximum Visibility
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+     <!-- == CTA Cards == -->
+    <section class="engage-section" aria-labelledby="engage-heading">
+      <div class="container">
+        <h2 id="engage-heading" class="sr-only">How to Engage</h2>
+
+        <div class="engage-section__grid">
+
+          <div class="engage-card">
+            <div class="engage-card__icon" aria-hidden="true"></div>
+            <h3>Browse Stories</h3>
+            <p>
+              Explore our diverse collection of accessible narratives from
+              around the globe.
+            </p>
+            <a href="index.html" class="engage-link" aria-label="Start reading StoryCast stories">
+              Start Reading →
+            </a>
+          </div>
+
+          <div class="engage-card">
+            <h3>Submit a Story</h3>
+            <p>
+              Are you a storyteller? Share your unique voice and help us grow
+              our library.
+            </p>
+            <a href="#" class="engage-link" aria-label="Share your voice and submit a story">
+              Share Your Voice →
+            </a>
+          </div>
+
+          <div class="engage-card">
+            <div class="engage-card__icon" aria-hidden="true"></div>
+            <h3>Contact Us</h3>
+            <p>
+              Need help or have accessibility feedback? Our dedicated team is
+              here for you.
+            </p>
+            <a href="#" class="engage-link" aria-label="Contact StoryCast support team">
+              Get Support →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==== FOOTER (identical to all pages)  ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+
+        <div class="site-footer__brand">
+          <a href="index.html" class="footer-logo" aria-label="StoryCast home">
+            <span class="logo-text">StoryCast</span>
+          </a>
+          <p>
+            "Every story deserves to be heard, seen, and felt."
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Share StoryCast">🔗</a>
+            <a href="#" aria-label="Visit our website">🌐</a>
+            <a href="#" aria-label="Email us">✉</a>
+          </div>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Explore</h4>
+          <ul role="list">
+            <li><a href="index.html">All Stories</a></li>
+            <li><a href="#">Audio Stories</a></li>
+            <li><a href="#">Video Stories</a></li>
+            <li><a href="#">Series</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#accessibility">Accessibility</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2024 StoryCast Productions. Built for the web, accessible to all.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+        <div class="accessibility-badge" role="note" aria-label="Accessibility certification">
+          <span aria-hidden="true"></span> Accessibility First Certified
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

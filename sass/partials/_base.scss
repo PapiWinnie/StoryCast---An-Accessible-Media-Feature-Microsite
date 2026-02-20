@@ -1,0 +1,116 @@
+// =============================================================================
+// FILE: sass/partials/_base.scss
+// Global resets, base element styles, accessibility utilities
+// =============================================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $text-base;
+  line-height: $leading-relaxed;
+  color: $color-text-primary;
+  background-color: $color-bg-surface;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    color: $color-accent-hover;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: $font-body;
+}
+
+//  Skip to content (accessibility) 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: $space-4;
+  z-index: $z-modal;
+  padding: $space-3 $space-6;
+  background: $color-accent;
+  color: $color-text-inverse;
+  font-weight: $weight-bold;
+  font-size: $text-sm;
+  border-radius: $radius-md;
+  letter-spacing: $tracking-wide;
+  transition: top 0.2s ease;
+
+  &:focus {
+    top: $space-4;
+  }
+}
+
+//  Global focus ring (WCAG AA — 3px amber) 
+:focus-visible {
+  outline: 3px solid $color-focus-ring;
+  outline-offset: 3px;
+  border-radius: $radius-sm;
+}
+
+//  Visually hidden (screen-reader only) 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+//  Container 
+.container {
+  width: 100%;
+  max-width: $container-max;
+  margin-inline: auto;
+  padding-inline: $container-padding;
+}
+
+//  Typography helpers 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  line-height: $leading-tight;
+  font-weight: $weight-bold;
+  color: $color-text-primary;
+}
+
+p {
+  color: $color-text-primary;
+  line-height: $leading-relaxed;
+}
